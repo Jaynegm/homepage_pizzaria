@@ -4,91 +4,343 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pizzaria</title>
+    <title>Italianinha Pizzaria</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="stylesheet" href="./src/css/layout/header.css">
+    <link rel="stylesheet" href="./src/css/layout/home.css">
+    <link rel="stylesheet" href="./src/css/style.css">
 </head>
 <body>
+
     <header>
-        <nav>
-            <img class="image__logo" src="./image/Logo Pizza.png" alt="Minha Logo">
-            <ul class="lista__menu">
-                <li><a class="txt__small" href="">Home</a></li>
-                <li><a class="txt__small" href="">Sobre</a></li>
-                <li><a class="txt__small" href="">Localização</a></li>
+        <nav id="navbar">
+            <img class="image__logo" src="./src/image/logo.png" alt="Minha Logo">
+            
+            <ul id="lista__menu">
+                <li class="nav-item active">
+                    <a href="#home">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#cardapio">Cardápio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#sobre">Sobre</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#depoimentos">Avaliações</a>
+                </li>
             </ul>
-            <ul class="lista__icon">
-                <li><span class="material-symbols-outlined">menu</span></li>
-            </ul>
+
+            <button class="pedido">
+                Peça aqui
+            </button>
+
+            <button id="mobile_btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
         </nav>
-        <div class="mensagem__principal">
-            <h1 class="titulo__principal">Italianinha Pizzaria é a melhor de SP!</h1>
-            <p class="txt__small">Há mais de 40 anos oferecendo a melhor pizza artesanal de SP! </p>
-            <button>Veja nosso menu</button>
+        <div id="mobile_menu">
+            <ul class="mobile_nav_list">
+                <li class="nav-item active">
+                    <a href="#home">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#cardapio">Cardápio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#sobre">Sobre</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#pessoas">Avaliações</a>
+                </li>
+            </ul>
         </div>
-        <div class="div__arredondada"></div>
-        <img class="imagem__principal" src="./image/pizza_principal.png" alt="Pizza principal">
     </header>
-    <section class="cards">
-        <div class="card card_verde_menta">
-            <img class="image_card"src="./image/pizza1.png" width="200px" alt="Pizza">
-            <p class="txt__medium">Pizza de Calabresa</p>
-            <p class="txt__small">R$80,00</p>
-        </div>
-        <div class="card card_rosa_pastel">
-            <img class="image_card" src="./image/pizza2.png" width="200px" alt="Pizza">
-            <p class="txt__medium">Pizza de Marguerita</p>
-            <p class="txt__small">R$90,00</p>
-        </div>
-        <div class="card card_pessego">
-            <img class="image_card" src="./image/pizza3.png" width="200px" alt="Pizza">
-            <p class="txt__medium">Pizza de Mussarela</p>
-            <p class="txt__small">R$85,00</p>
-        </div>
-    </section>
 
-    <section class="about">
-        <div class="text_sobre">
-        <h3 class="titulo_historia">Nossa História</h3>
-        <p class="txt_historia">A Italianinha Pizzaria é uma empresa de origem familiar que foi trazida para o Brasil na década de 80. Dona Vilma e seus filhos trouxeram seu pequeno negócio para o país e, através de muito trabalho, conseguiram transformá-lo em uma referência quando se trata de pizzas italianas.Com uma massa italiana de sabor incomparável,a Italianinha oferece pizzas artesanais que são leves, macias e deliciosas. Se você está procurando uma opção saborosa e quentinha para reunir a família, a Italianinha é a escolha perfeita.</p><br>
-        <p class="txt_convite">Faça sua reserva e desfrute de uma experiência gastronômica única!</p>
-        </div>
+    <main id="content">
+        <section id="home">
+            <div class="shape"></div>
+            <div id="cta">
+                <h1 class="title">
+                    O sabor que vai até
+                    <span>você</span>
+                </h1>
 
-    </section>
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="footer-col">
-                    <h4>Empresa</h4>
-                    <ul>
-                        <li><a href="#">Institucional</a></li>
-                        <li><a href="#">Nossas Unidades</a></li>
-                        <li><a href="#">Trabalhe Conosco</a></li>
-                    </ul>
+                <p class="description">
+                    Mais do que uma pizza, uma experiência! Ingredientes frescos, receitas autênticas e um toque especial que faz toda a diferença.
+                </p>
+
+                <div id="cta_buttons">
+                    <a href="#" class="btn-default">
+                        Ver cardápio
+                    </a>
+
+                    <a href="tel:+55555555555" id="phone_button">
+                        <button class="btn-default">
+                            <i class="fa-solid fa-phone"></i>
+                        </button>
+                        (13) 99941-6563
+                    </a>
                 </div>
-                <div class="footer-col">
-                    <h4>Precisa de ajuda?</h4>
-                    <ul>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Fale Conosco</a></li>
-                        <li><a href="#">Área de Entrega</a></li>
-                    </ul>
+
+                <div class="social-media-buttons">
+                    <a href="">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+
+                    <a href="">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
                 </div>
-                <div class="footer-col">
-                    <h4>Redes Sociais</h4>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+
+            <div id="banner">
+                <img src="src/image/banner.png" alt="">
+            </div>
+        </section>
+        <script src="src/javascript/script.js"></script> 
+
+        <section id="cardapio">
+            <h2 class="section-title">Cardápio</h2>
+            <h3 class="section-subtitle">Nossos pratos especiais</h3>
+
+            <div id="dishes">
+                <div class="dish">
+                    <div class="dish-heart">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <img src="src/image/pizza1.png" class="imagens" alt="">
+
+                    <h3 class="dish-title">
+                        Rúcula
+                    </h3>
+
+                    <span class="dish-description">
+                       Mussarela de Búfala, rúcula e tomate seco
+                    </span>
+
+                    <div class="dish-rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <span>(500+)</span>
+                    </div>
+
+                    <div class="dish-price">
+                        <h4>R$68,00</h4>
+                        <button class="btn-default">
+                            <i class="fa-solid fa-basket-shopping"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="dish">
+                    <div class="dish-heart">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <img src="src/image/pizza2.png" class="imagens" alt="">
+
+                    <h3 class="dish-title">
+                       Marguerita
+                    </h3>
+
+                    <span class="dish-description">
+                        Mussarela, tomate e manjericão
+                    </span>
+
+                    <div class="dish-rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <span>(500+)</span>
+                    </div>
+
+                    <div class="dish-price">
+                        <h4>R$90,00</h4>
+                        <button class="btn-default">
+                            <i class="fa-solid fa-basket-shopping"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="dish">
+                    <div class="dish-heart">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <img src="src/image/pizza3.png" class="imagens" alt="">
+
+                    <h3 class="dish-title">
+                      Brócolis com 4 queijos
+                    </h3>
+
+                    <span class="dish-description">
+                        Brócolis, gorgonzola, catupiry, mussarela e provolone
+                    </span>
+
+                    <div class="dish-rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <span>(500+)</span>
+                    </div>
+
+                    <div class="dish-price">
+                        <h4>R$72,00</h4>
+                        <button class="btn-default">
+                            <i class="fa-solid fa-basket-shopping"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="dish">
+                    <div class="dish-heart">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <img src="src/image/pizza4.png" class="imagens" alt="">
+
+                    <h3 class="dish-title">
+                        Toscana
+                    </h3>
+
+                    <span class="dish-description">
+                        Tomate fresco, alho, manjericão, mussarela e linguiça toscana
+                    </span>
+
+                    <div class="dish-rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <span>(500+)</span>
+                    </div>
+
+                    <div class="dish-price">
+                        <h4>R$80,00</h4>
+                        <button class="btn-default">
+                            <i class="fa-solid fa-basket-shopping"></i>
+                        </button>
                     </div>
                 </div>
             </div>
+        </section>
+
+        <section id="depoimentos">
+            <div id="testimonials_content">
+                <h2 class="section-title">
+                    Depoimentos
+                </h2>
+                <h3 class="section-subtitle">
+                    O que os clientes falam sobre nós
+                </h3>
+
+                <div id="feedbacks">
+                    <div class="feedback">
+                        <img src="src/image/avatar01.jpg" class="feedback-avatar" alt="">
+
+                        <div class="feedback-content">
+                            <p>
+                                Antônio Souza
+                                <span>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </span>
+                            </p>
+                            <p>
+                                "Simplesmente a melhor pizzaria da cidade! O atendimento é impecável, os pedidos sempre chegam quentinhos e no horário certo. Além disso, os entregadores são super educados e atenciosos. Já virei cliente fiel!"
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="feedback">
+                        <img src="src/image/avatar02.jpg" class="feedback-avatar" alt="">
+
+                        <div class="feedback-content">
+                            <p>
+                                Mariana Souza
+                                <span>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </span>
+                            </p>
+                            <p>
+                                "Que pizza deliciosa! A massa é super leve e crocante, os ingredientes são frescos e de alta qualidade. Dá para sentir o capricho em cada fatia. Sem dúvida, a melhor experiência gastronômica que já tive!"
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="src/image/chefe.jpg" alt="Equipe da Italianinha Pizzaria">
+                </div>
+        
+                <div class="text-content">
+                    <h2 class="section-title">Sobre Nós</h2>
+                    <h3 class="section-subtitle">Conheça a Italianinha Pizzaria</h3>
+                    
+                    <p>
+                        Há mais de 10 anos, a Italianinha Pizzaria traz o verdadeiro sabor da Itália até você. 
+                        Nossas pizzas são preparadas com ingredientes selecionados, massa artesanal e um toque especial 
+                        que transforma cada mordida em uma experiência única. Nosso compromisso é oferecer sempre o melhor 
+                        para nossos clientes, com um atendimento de qualidade e entregas rápidas.
+                    </p>
+            
+                    <p>
+                        Venha nos visitar ou faça seu pedido online e descubra porque somos a pizzaria preferida da região!
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <img src="src/images/wave.svg" alt="">
+
+        <div id="footer_items">
+            <span id="copyright">
+                &copy 2024 Italianinha Pizzaria
+            </span>
+
+            <div class="social-media-buttons">
+                <a href="">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+
+                <a href="">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+            </div>
         </div>
-   </footer>
-    <div class="footer-bottom">
-        <p>&copy; 2023 Italianinha Pizzaria. Todos os direitos reservados.</p>
-    </div>
+    </footer>
 </body>
 </html>

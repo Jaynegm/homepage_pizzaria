@@ -1,0 +1,71 @@
+#depoimentos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 48px;
+    text-align: center; /* Centraliza o título e subtítulo */
+}
+
+#testimonials_content {
+    width: 100%;
+}
+
+.section-title, .section-subtitle {
+    text-align: center;
+}
+
+#feedbacks {
+    display: flex;
+    flex-direction: row; /* Alinha os depoimentos lado a lado */
+    gap: 20px;
+    margin-bottom: 40px;
+    margin-top: 30px;
+    justify-content: center;
+}
+
+.feedback {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: var(--color-neutral-0);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
+    width: 45%; /* Garante que os depoimentos tenham espaço suficiente */
+}
+
+.feedback-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+.feedback-content p {
+    display: flex;
+    flex-direction: column; /* Organiza os itens verticalmente */
+    align-items: center; /* Alinha o nome e as estrelas à esquerda */
+    gap: 5px;
+    margin-top: 5px; /* Espaço entre o nome e as estrelas */
+}
+
+.feedback-content p span {
+    display: block; /* Faz as estrelas ficarem abaixo do nome */
+    color: var(--color-primary-6);
+}
+
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    #feedbacks {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feedback {
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+    }
+}
